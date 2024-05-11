@@ -53,14 +53,7 @@ export default function Policy() {
           what happens with that data.
         </p>
       </div>
-      <div>
-        <h1>When do we collect information?</h1>
-        <h2>On our website:</h2>
-        <p>
-          We collect information from you when you fill out a form or enter
-          information on our site.
-        </p>
-      </div>
+
       <div>
         <h1>When Do We Collect Information?</h1>
         <h2> On our website:</h2>
