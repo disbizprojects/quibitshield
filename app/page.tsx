@@ -15,7 +15,7 @@ export default function page() {
         </Link>
       </div>
       <div className=" items-center justify-center h-full gap-4  lg:flex ">
-        <div className="lg:w-[852px] lg:h-[700px] h-[500px] overflow-hidden  flex items-center  ">
+        <div className="lg:w-[852px] lg:h-[800px] h-[500px] overflow-hidden  flex items-center  ">
           <video
             src="https://utfs.io/f/0c89a4fc-233e-4743-9a2f-a457b33f656b-x6zamt.mp4"
             autoPlay
