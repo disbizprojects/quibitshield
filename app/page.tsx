@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
 
-import Video from "next-video";
-import videoLoop from "/videos/logo.mp4"; // use your video file name
-
 import React from "react";
 import { Input } from "@/components/ui/input";
 import Footer from "@/components/footer";
