@@ -29,7 +29,7 @@ export default function page() {
             <div className="grad   p-[1.5px] h-8 rounded-full ju">
               <Input className="w-full border-none   rounded-full h-full bg-black"></Input>
             </div>
-            <Link href="/dashboard" className="mx-auto">
+            <Link href="/dashboard" className="mx-au">
               <Button className="mx-auto grad rounded-full text-black">
                 Sign in
               </Button>
