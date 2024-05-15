@@ -24,13 +24,13 @@ export default function page() {
             loop
           ></video>
         </div>
-        <div className="lg:w-[40%] flex flex-col gap-4">
-          <h1 className="text-white lg:text-2xl text-xl">
+        <div className="lg:w-[40%] flex flex-col gap-2">
+          <h1 className="text-white lg:text-xl text-lg">
             Enhanced IoT, smart cities, payments & FinTech using advanced
             post-quantum cryptography and AI, fostering innovation and ensuring
             data sovereignty.{" "}
           </h1>
-          <hr className="w-[50%] h-1  my-4 grad  border-0 rounded"></hr>
+          <hr className="w-[50%] h-1  m grad  border-0 rounded"></hr>
           <div className=" flex flex-col gap-4">
             <p>
               We have chosen to operate in stealth mode for the ﬁrst year while
