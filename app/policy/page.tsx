@@ -120,30 +120,7 @@ export default function Policy() {
           of visitors from a particular country, or region).
         </p>
       </div>
-      <div>
-        <h1>Do we use “cookies”?</h1>
-        <p>We do not use cookies on our web site.</p>
 
-        <h2>Third-party disclosure</h2>
-        <p>
-          We do not sell, trade, or otherwise transfer your personally
-          identifiable information to outside parties unless we provide users
-          with advance notice. This does not include website hosting partners
-          and other parties who assist us in operating our website, conducting
-          our business, or serving our users, so long as those parties agree to
-          keep this information confidential. We may also release information
-          when its release is appropriate to comply with the law, enforce our
-          policies, or protect ours or others' rights, property or safety.
-        </p>
-
-        <p>
-          However, non-personally identifiable visitor information may be
-          provided to other parties for marketing, advertising, or other uses.
-          Think aggregated statistics (number of website visitors in a
-          particular month) or trends (e.g., If we see an increase in the number
-          of visitors from a particular country, or region).
-        </p>
-      </div>
       <div>
         <h1>Third-party links</h1>
         <p>
@@ -159,16 +136,15 @@ export default function Policy() {
         </p>
       </div>
       <div>
-        <h1 className="title">Privacy Policy</h1>
+        <h1 className="title">Privacy Policy Changes</h1>
         <p>
-          Our privacy policy was written to help you understand how we handle
-          "Personally identifiable information," which is information that can
-          be used on its own or with other information to identify, contact, or
-          locate a single person, or to identify an individual. Please read our
-          privacy policy carefully to get a clear understanding of how we
-          collect, use, protect or otherwise handle your Personally Identifiable
-          Information in accordance with our website.
+          Although most changes are likely to be minor, we may change this
+          Privacy Policy from time to time and at our sole discretion. We
+          encourage visitors to frequently check this page for any changes to
+          our Privacy Policy. Your continued use of this site after any change
+          in this Privacy Policy will constitute your acceptance of such change.
         </p>
+        <div className="text-xs ">Last Edited on May 10, 2024.</div>
       </div>
     </div>
   );

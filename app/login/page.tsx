@@ -43,7 +43,7 @@ export default function Page() {
                 <Input
                   name="password"
                   type="password"
-                  placeholder="@Password"
+                  placeholder="ENTER PASSWORD"
                   className="w-full border-none   rounded-full h-full bg-black"
                 ></Input>
               </div>

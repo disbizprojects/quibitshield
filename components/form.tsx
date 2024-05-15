@@ -54,7 +54,7 @@ const SubscriptionForm: React.FC = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-2">
-          <h1 className="lg:text-4xl text-2xl grad bg-clip-text text-transparent inline-block">
+          <h1 className="lg:text-4xl text-2xl bg-gradient-to-r from-[#1fdcbd] via-[#248ef5] to-[#000103] bg-clip-text text-transparent inline-block">
             SUBSCRIBE
           </h1>
           <p className="lg:text-3xl text-xl">To Get The Latest Updates</p>
