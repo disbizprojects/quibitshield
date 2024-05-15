@@ -1,5 +1,7 @@
+"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SessionProvider } from "next-auth/react";
 
 export default function RootLayout({
   children,
@@ -8,9 +10,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="   dark:bg-black">
-      <body className="font-[Axiforma-heavy] bg-black p-4  lg:py-10 lg:px-32">
-        {children}
-      </body>
+      <SessionProvider>
+        <body className="font-[Axiforma-heavy] bg-black p-4  lg:py-10 lg:px-32">
+          {children}
+        </body>
+      </SessionProvider>
     </html>
   );
 }

@@ -1,11 +1,13 @@
+"use client";
 import { Button } from "@/components/ui/button";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import React from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 
 export default function Page() {
-  const data = [
+  const data1 = [
     {
       header: "The Impending Threat of Quantum Computing",
       paragraphs: [
@@ -56,6 +58,21 @@ export default function Page() {
       ],
     },
   ];
+  const { data: session, status } = useSession();
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  // If user is not authenticated, redirect to login page
+  if (!session) {
+    // Example redirect to login page
+    return (
+      <div>
+        Access Denied. Please <a href="/login">login</a> to view this page.
+      </div>
+    );
+  }
+
   return (
     <div
       className="bg-cover bg-no-repeat"
@@ -72,7 +89,7 @@ export default function Page() {
         ></Image>
       </div>
       <div className="py-10 flex flex-col gap-16">
-        {data.map((i) => (
+        {data1.map((i) => (
           <div key={i.header} className="">
             <h1 className=" lg:text-4xl text-3xl ">{i.header}</h1>
             <hr className="w-[20%] h-1  my-4 grad  border-0 rounded"></hr>

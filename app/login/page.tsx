@@ -1,10 +1,25 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
+import axios from "axios";
+import { signIn } from "next-auth/react";
+import React, { FormEvent } from "react";
 
-import React from "react";
+export default function Page() {
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const form = new FormData(e.target as HTMLFormElement);
+    const password = form.get("password") as string;
 
-export default function page() {
+    try {
+      signIn("credentials", {
+        password,
+        callbackUrl: "/dashboard",
+      });
+    } catch (error) {
+      console.error("Error registering user:", error);
+    }
+  };
   return (
     <div>
       <div className="items-center justify-center h-full gap-4  lg:flex">
@@ -21,20 +36,26 @@ export default function page() {
           <h1 className="lg:text-4xl text-2xl grad bg-clip-text text-transparent inline-block">
             Welcome!
           </h1>
-          <p className="lg:text-3xl text-2xl">Sign In To Your Account</p>
-          <div className="flex flex-col gap-3">
-            <div className="grad w-full  p-[1.5px] h-8 rounded-full ju">
-              <Input className="w-full border-none   rounded-full h-full bg-black"></Input>
-            </div>
-            <div className="grad   p-[1.5px] h-8 rounded-full ju">
-              <Input className="w-full border-none   rounded-full h-full bg-black"></Input>
-            </div>
-            <Link href="/dashboard" className="mx-au">
-              <Button className="mx-auto grad rounded-full text-black">
+
+          <form onSubmit={handleSubmit}>
+            <div className="flex flex-col gap-3">
+              <div className="grad   p-[1.5px] h-8 rounded-full ju">
+                <Input
+                  name="password"
+                  type="password"
+                  placeholder="@Password"
+                  className="w-full border-none   rounded-full h-full bg-black"
+                ></Input>
+              </div>
+
+              <Button
+                type="submit"
+                className="mx-auto grad rounded-full text-black"
+              >
                 Sign in
               </Button>
-            </Link>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
