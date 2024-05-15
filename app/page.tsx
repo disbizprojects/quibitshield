@@ -1,9 +1,11 @@
+"use client";
 import { Button } from "@/components/ui/button";
 
 import React from "react";
 import { Input } from "@/components/ui/input";
 import Footer from "@/components/footer";
 import Link from "next/link";
+import SubscriptionForm from "@/components/form";
 
 export default function page() {
   return (
@@ -45,20 +47,7 @@ export default function page() {
               solutions and are eager to help you learn more.
             </p>
           </div>
-          <div className="flex flex-col gap-2">
-            <h1 className="lg:text-4xl text-2xl grad bg-clip-text text-transparent inline-block">
-              SUBSCRIBE
-            </h1>
-            <p className="lg:text-3xl text-xl">To Get The Latest Updates</p>
-            <div className="mt-2 flex gap-2 items-center">
-              <div className="grad  w-[50%] p-[1.5px] h-8 rounded-full ju">
-                <Input className="w-full border-none   rounded-full h-full bg-black"></Input>
-              </div>
-              <Button className="text-black font-bold grad rounded-full  font-[Axiforma-thin] ">
-                Subscribe
-              </Button>
-            </div>
-          </div>
+          <SubscriptionForm></SubscriptionForm>
           <div></div>
         </div>
       </div>

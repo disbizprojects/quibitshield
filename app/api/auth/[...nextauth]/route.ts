@@ -20,15 +20,20 @@ const authOptions: AuthOptions = {
         password: { type: "password", placeholder: "password" },
       },
       async authorize(credentials) {
-        const givenPassword = await prisma.user.findUnique({
+        if (!credentials) {
+          return Promise.resolve(null);
+        }
+
+        const user = await prisma.user.findUnique({
           where: {
             id: 123334,
           },
         });
-        if (givenPassword?.password === credentials?.password) {
-          return new NextResponse("Password Correct", { status: 200 });
+
+        if (user && user.password === credentials.password) {
+          return Promise.resolve(user);
         } else {
-          return null;
+          return Promise.resolve(null);
         }
       },
     }),
