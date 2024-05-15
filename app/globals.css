@@ -116,4 +116,7 @@
   li {
     @apply font-[Axiforma-thin];
   }
+  b {
+    @apply font-[Axiforma-heavy] text-xl;
+  }
 }

@@ -99,7 +99,9 @@ export default function Page() {
     },
     {
       header: (
-        <h1>Securing Critical Applications with Post-Quantum Cryptosystem</h1>
+        <h1>
+          Securing Critical Applications with our Post-Quantum Cryptosystem
+        </h1>
       ),
       paragraphs: [
         <p>
@@ -179,7 +181,7 @@ export default function Page() {
       ],
     },
     {
-      header: <h1>Leveraging LWE IBE in Open-Source Solutions</h1>,
+      header: <h1>Leveraging LWE DLP IBE in Open-Source Solutions</h1>,
       paragraphs: [
         <p>
           The 2023 IoT & Edge Commercial Adoption Survey highlights the growing
@@ -287,7 +289,7 @@ export default function Page() {
           <div key={Math.random()} className="">
             <h1 className=" lg:text-4xl text-3xl ">{i.header}</h1>
             <hr className="w-[20%] h-1  my-4 grad  border-0 rounded"></hr>
-            <div className="flex flex-col gap-8">
+            <div className="flex dashboard flex-col gap-8">
               {i.paragraphs.map((p) => (
                 <p className="text-xl font-bold" key={Math.random()}>
                   {p}
