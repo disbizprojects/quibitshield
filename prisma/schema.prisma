@@ -57,6 +57,11 @@ model User {
 
   @@map(name: "users")
 }
+model EmailCollection{
+  email String @unique
+  sendedAt DateTime  @default(now()) 
+
+}
 
 model VerificationRequest {
   id         Int      @id @default(autoincrement())
