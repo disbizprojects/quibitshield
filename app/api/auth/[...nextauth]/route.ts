@@ -2,7 +2,14 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 import { AuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
+import { DefaultSession } from "next-auth";
+import { User as UserModel } from "@prisma/client";
 
+declare module "next-auth" {
+  interface User extends UserModel {
+    id: number; // <- here it is
+  }
+}
 import CredentialsProvider from "next-auth/providers/credentials";
 import { z } from "zod";
 import { NextResponse } from "next/server";
@@ -19,7 +26,7 @@ const authOptions: AuthOptions = {
       credentials: {
         password: { type: "password", placeholder: "password" },
       },
-      async authorize(credentials) {
+      async authorize(credentials: any) {
         if (!credentials) {
           return Promise.resolve(null);
         }
