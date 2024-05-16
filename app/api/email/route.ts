@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
 
     if (checkEmail) {
       return new NextResponse("The email has already been taken", {
-        status: 409,
+        status: 200,
       });
     } else {
       const newEmailCollection = await prisma.emailCollection.create({

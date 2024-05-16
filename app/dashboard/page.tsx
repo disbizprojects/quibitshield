@@ -313,9 +313,14 @@ export default function Page() {
         ))}
       </div>
       <div className="w-full flex justify-center">
-        <Button className="rounded-full grad text-black mx-auto">
-          Click to open or download our deck
-        </Button>
+        <a
+          href="https://utfs.io/f/5c725085-16ea-42af-b8f1-438a904e9b73-98i2z5.pdf"
+          download
+        >
+          <Button className="rounded-full grad text-black mx-auto">
+            Click to open or download our deck
+          </Button>
+        </a>
       </div>
       <div className="w-full flex justify-center mt-8">
         <div className="flex gap-4 flex-col">

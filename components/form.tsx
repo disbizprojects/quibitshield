@@ -28,12 +28,12 @@ const SubscriptionForm: React.FC = () => {
       });
       if (email) {
         toast({
-          title: "Success",
           variant: "default",
-          description: "You have subscribed successfully",
+          description: email.data,
         });
       } else {
         toast({
+          variant: "destructive",
           title: "Subscription Failed",
         });
       }
@@ -65,6 +65,7 @@ const SubscriptionForm: React.FC = () => {
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
+                placeholder="Enter valid email address"
                 className="w-full border-none   rounded-full h-full bg-black"
               ></Input>
               {error && <p className="error">{error}</p>}
