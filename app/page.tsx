@@ -1,22 +1,21 @@
-import { Button } from "@/components/ui/button";
-
-import React from "react";
-import { Input } from "@/components/ui/input";
 import Footer from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import SubscriptionForm from "@/components/form";
+
 export default function page() {
   return (
-    <div className="bg-black  flex flex-col gap-2">
+    <div className="bg-black  flex flex-col gap-4">
       <div className="flex w-full justify-end">
         <Link href="/login">
           {" "}
           <Button className="grad rounded-full text-black w-32 ">Log In</Button>
         </Link>
       </div>
-      <div className=" items-center justify-center h-full gap-2  lg:flex ">
-        <div className="lg:w-[652px]  lg:h-[600px] h-[500px] overflow-hidden  flex items-center  ">
+      <div className=" items-center justify-center h-full gap-4  lg:flex ">
+        <div className="lg:w-[502px] lg:h-[500px] h-[500px] overflow-hidden  flex items-center  ">
           <video
+            className="w-full h-full"
             src="https://utfs.io/f/0c89a4fc-233e-4743-9a2f-a457b33f656b-x6zamt.mp4"
             autoPlay
             muted
@@ -45,10 +44,24 @@ export default function page() {
               solutions and are eager to help you learn more.
             </p>
           </div>
-          <SubscriptionForm></SubscriptionForm>
+          <div className="flex flex-col gap-2">
+            <h1 className="lg:text-4xl text-2xl grad bg-clip-text text-transparent inline-block">
+              SUBSCRIBE
+            </h1>
+            <p className="lg:text-3xl text-xl">To Get The Latest Updates</p>
+            <div className="mt-2 flex gap-2 items-center">
+              <div className="grad  w-[50%] p-[1.5px] h-8 rounded-full ju">
+                <Input className="w-full border-none   rounded-full h-full bg-black"></Input>
+              </div>
+              <Button className="text-black font-bold grad rounded-full  font-[Axiforma-thin] ">
+                Subscribe
+              </Button>
+            </div>
+          </div>
           <div></div>
         </div>
       </div>
+
       <Footer></Footer>
     </div>
   );

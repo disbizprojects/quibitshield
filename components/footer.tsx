@@ -19,7 +19,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className=" flex md:text-start text-center flex-col lg:flex-row text-sm gap-4 ">
+      <div className=" flex md:text-start text-center flex-col lg:flex-row text-sm gap-4 lg:-mt-10 ">
         <p>Copyright @ 2024 QubitShield.io</p>
         <Link href="/policy" className="hover:underline">
           {" "}
