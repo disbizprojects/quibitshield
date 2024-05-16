@@ -1,5 +1,7 @@
 import Footer from "@/components/footer";
+import SubscriptionForm from "@/components/form";
 import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 
@@ -49,14 +51,7 @@ export default function page() {
               SUBSCRIBE
             </h1>
             <p className="lg:text-3xl text-xl">To Get The Latest Updates</p>
-            <div className="mt-2 flex gap-2 items-center">
-              <div className="grad  w-[50%] p-[1.5px] h-8 rounded-full ju">
-                <Input className="w-full border-none   rounded-full h-full bg-black"></Input>
-              </div>
-              <Button className="text-black font-bold grad rounded-full  font-[Axiforma-thin] ">
-                Subscribe
-              </Button>
-            </div>
+            <SubscriptionForm></SubscriptionForm>
           </div>
           <div></div>
         </div>
