@@ -16,15 +16,19 @@ export default function Page() {
   }, []);
   const data1 = [
     {
-      header: <h1>The Impending Threat of Quantum Computing</h1>,
+      header: (
+        <h1>
+          Facing The Impending Threat of Quantum Computing with Confidence
+        </h1>
+      ),
       paragraphs: [
         <p>
-          "The rapid advancement of quantum computing technology poses a
+          The rapid advancement of quantum computing technology poses a
           significant threat to the encryption methods currently used to
           safeguard sensitive information and secrets worldwide. While the exact
           timeline is uncertain, it is widely accepted that quantum computers
           will eventually overcome classical encryption techniques, rendering
-          current methods obsolete."
+          current methods obsolete.
         </p>,
         <p>
           The ability to break the current foundation of modern encryption will
@@ -49,7 +53,7 @@ export default function Page() {
           utilizes LWE DLP IBE with TLS, embedded in WolfSSL and FIPS 204
           (Crystals Dilithium) Module-Lattice-Based Digital Signature Standard
           and it presents a novel and robust approach to security. This system
-          offers several advantages over other post-quantum solutions for IOT,
+          offers several advantages over other post-quantum solutions for IoT,
           mission critical infrastructure and payments:
         </p>,
         <p>
@@ -324,11 +328,11 @@ export default function Page() {
         <div className="flex gap-4 flex-col">
           <div className="flex gap-2 items-center">
             <IoMail className="grad w-9 h-9 p-1 rounded-full text-black" />
-            <p>info@QubitShield.io</p>
+            <a href="mailto:info@QubitShield.io">info@QubitShield.io</a>
           </div>
           <div className="flex gap-2 items-center">
             <FaXTwitter className="grad w-9 h-9 p-1 rounded-full text-black" />
-            <p>@QubitShield</p>
+            <a href="https://twitter.com/QubitShield">@QubitShield</a>
           </div>
         </div>
       </div>

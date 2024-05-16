@@ -25,7 +25,7 @@ export default function page() {
           ></video>
         </div>
         <div className="lg:w-[40%] flex flex-col gap-4">
-          <h1 className="text-white lg:text-2xl text-xl">
+          <h1 className="text-white lg:text-2xl text-xl text-wrap">
             Enhanced IoT, smart cities, payments & FinTech using advanced
             post-quantum cryptography and AI, fostering innovation and ensuring
             data sovereignty.{" "}
