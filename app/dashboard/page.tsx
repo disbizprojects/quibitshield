@@ -9,11 +9,9 @@ import { IoMail } from "react-icons/io5";
 
 export default function Page() {
   useEffect(() => {
-    // Component did mount logic here if needed
-
-    // Cleanup function to sign out on unmount
     return () => {
-      signOut({ redirect: false });
+      signOut({ redirect: false, callbackUrl: "/login" });
+      // Clearing cookies manually if needed
     };
   }, []);
   const data1 = [
