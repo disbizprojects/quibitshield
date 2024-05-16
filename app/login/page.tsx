@@ -47,7 +47,7 @@ export default function Page() {
           </h1>
 
           <form onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
               <div className="grad p-[1.5px] h-8 rounded-full">
                 <Input
                   name="password"
@@ -59,7 +59,7 @@ export default function Page() {
               <div>
                 {error && (
                   <div className="text-red-500 text-sm mt-2">
-                    Password Incoreect
+                    Password Incorrect
                   </div>
                 )}
               </div>
