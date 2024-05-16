@@ -1,12 +1,21 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useEffect } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 
 export default function Page() {
+  useEffect(() => {
+    // Component did mount logic here if needed
+
+    // Cleanup function to sign out on unmount
+    return () => {
+      signOut({ redirect: false });
+    };
+  }, []);
   const data1 = [
     {
       header: <h1>The Impending Threat of Quantum Computing</h1>,
@@ -264,7 +273,11 @@ export default function Page() {
     // Example redirect to login page
     return (
       <div>
-        Access Denied. Please <a href="/login">login</a> to view this page.
+        Access Denied. Please{" "}
+        <Link className="underline" href="/login">
+          login
+        </Link>{" "}
+        to view this page.
       </div>
     );
   }
