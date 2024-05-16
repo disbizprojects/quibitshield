@@ -10,7 +10,7 @@ import { IoMail } from "react-icons/io5";
 export default function Page() {
   useEffect(() => {
     return () => {
-      signOut({ redirect: false, callbackUrl: "/login" });
+      signOut({ redirect: false });
       // Clearing cookies manually if needed
     };
   }, []);
