@@ -66,7 +66,7 @@ const SubscriptionForm: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter valid email address"
-                className="w-full border-none   rounded-full h-full bg-black"
+                className="w-full border-none text-center   rounded-full h-full bg-black"
               ></Input>
               {error && <p className="error">{error}</p>}
             </div>
