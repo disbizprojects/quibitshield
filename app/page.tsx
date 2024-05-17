@@ -7,14 +7,14 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <div className="bg-black  flex flex-col gap-4">
+    <div className="bg-black h-screen flex flex-col   relative">
       <div className="flex w-full justify-end">
-        <Link href="/login">
+        <Link href="/login" className="">
           {" "}
           <Button className="grad rounded-full text-black w-32 ">Log In</Button>
         </Link>
       </div>
-      <div className=" items-center justify-center h-full gap-4  lg:flex ">
+      <div className=" items-center justify-center h-full gap-4 lg:-mt-20 lg:flex ">
         <div className="lg:w-[502px] lg:h-[500px] h-[500px] overflow-hidden  flex items-center  ">
           <video
             className="w-full h-full"
@@ -53,7 +53,9 @@ export default function page() {
         </div>
       </div>
 
-      <Footer></Footer>
+      <div className=" absolute w-full bottom-8">
+        <Footer></Footer>
+      </div>
     </div>
   );
 }
