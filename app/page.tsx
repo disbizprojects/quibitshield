@@ -1,14 +1,14 @@
 import Footer from "@/components/footer";
 import SubscriptionForm from "@/components/form";
 import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+
 import Link from "next/link";
 
 export default function page() {
   return (
     <div className="bg-black lg:h-screen flex flex-col   lg:relative">
-      <div className="flex w-full justify-end">
+      <div className="flex w-full justify-end relative">
+        {" "}
         <Link href="/login" className="">
           {" "}
           <Button className="grad rounded-full text-black w-32 ">Log In</Button>
