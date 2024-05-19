@@ -14,6 +14,7 @@ export default function Page() {
       // Clearing cookies manually if needed
     };
   }, []);
+  console.log("dkjf");
   const data1 = [
     {
       header: (
@@ -291,14 +292,17 @@ export default function Page() {
         backgroundImage: `url('https://utfs.io/f/2b3b3987-bbf4-45fa-b3ee-f8d421b302cb-47qkr6.svg')`,
       }}
     >
-      <div>
-        <Image
-          src="https://utfs.io/f/0ba271cb-ad24-4541-a7d5-a76acd52dd92-17tfp1.svg"
-          width={300}
-          height={100}
-          alt="logo"
-        ></Image>
-      </div>
+      <Link href="/">
+        {" "}
+        <div>
+          <Image
+            src="https://utfs.io/f/0ba271cb-ad24-4541-a7d5-a76acd52dd92-17tfp1.svg"
+            width={300}
+            height={100}
+            alt="logo"
+          ></Image>
+        </div>
+      </Link>
       <div className="py-10 flex flex-col gap-16">
         {data1.map((i) => (
           <div key={Math.random()} className="">

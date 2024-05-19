@@ -97,10 +97,18 @@ export default function Policy() {
         </p>
       </div>
       <div>
-        <h1>Do we use “cookies”?</h1>
-        <p>We do not use cookies on our web site.</p>
+        <h1>Use of Essential Cookies</h1>
+        <p>
+          {" "}
+          Our website uses essential cookies, also known as strictly necessary
+          cookies, to ensure the proper functioning of the site. These cookies
+          are vital for providing online services and facilitating communication
+          over the network. Essential cookies are automatically placed on your
+          device when you access our website and are exempt from the requirement
+          of consent as per the GDPR and ePrivacy Directive
+        </p>
 
-        <h2>Third-party disclosure</h2>
+        <h1>Third-party disclosure</h1>
         <p>
           We do not sell, trade, or otherwise transfer your personally
           identifiable information to outside parties unless we provide users
