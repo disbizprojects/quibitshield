@@ -1,5 +1,6 @@
 import { Dot } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Policy() {
@@ -10,14 +11,16 @@ export default function Policy() {
         backgroundImage: `url('https://utfs.io/f/2b3b3987-bbf4-45fa-b3ee-f8d421b302cb-47qkr6.svg')`,
       }}
     >
-      <div className="w-full flex justify-center">
-        <Image
-          src="https://utfs.io/f/0ba271cb-ad24-4541-a7d5-a76acd52dd92-17tfp1.svg"
-          width={300}
-          height={100}
-          alt="logo"
-        ></Image>
-      </div>
+      <Link href="/">
+        <div className="w-full flex     lg:justify-start  justify-center">
+          <Image
+            src="https://utfs.io/f/0ba271cb-ad24-4541-a7d5-a76acd52dd92-17tfp1.svg"
+            width={300}
+            height={100}
+            alt="logo"
+          ></Image>
+        </div>
+      </Link>
 
       <div>
         <h1 className="lg:text-8xl text-4xl ">Privacy Policy</h1>
