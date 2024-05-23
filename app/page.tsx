@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function page() {
   return (
     <div className="bg-black lg:h-screen flex flex-col   lg:relative">
-      <div className="flex w-full justify-end relative">
+      <div className="flex w-full gap-4 justify-end relative">
         {" "}
         <Link href="/login" className="">
           {" "}

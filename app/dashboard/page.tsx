@@ -3,18 +3,28 @@ import { Button } from "@/components/ui/button";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
-
+import { FaUser } from "react-icons/fa";
+import { MdLogout } from "react-icons/md";
+import { useState, useEffect } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import axios from "axios";
+import UAParser from "ua-parser-js";
+import useIpAddress from "../admin/loginInfo/useIpAddress";
+import useDeviceInfo from "../admin/loginInfo/osFinder";
+import { number } from "zod";
+import { randomBytes } from "crypto";
 export default function Page() {
-  useEffect(() => {
-    return () => {
-      signOut({ redirect: false });
-      // Clearing cookies manually if needed
-    };
-  }, []);
-  console.log("dkjf");
+  const { ipAddress, error } = useIpAddress();
+  const deviceInfo = useDeviceInfo();
   const data1 = [
     {
       header: (
@@ -266,13 +276,15 @@ export default function Page() {
       ],
     },
   ];
+
   const { data: session, status } = useSession();
   if (status === "loading") {
     return <div>Loading...</div>;
   }
+  const isAdmin = session?.user.role === "admin";
 
   // If user is not authenticated, redirect to login page
-  if (!session) {
+  if (!session && status === "unauthenticated") {
     // Example redirect to login page
     return (
       <div>
@@ -285,24 +297,90 @@ export default function Page() {
     );
   }
 
+  function generateSecureRandomString(length: number): string {
+    return randomBytes(length).toString("hex").substring(0, length);
+  }
+
+  const updatedUserStatus = async (): Promise<void> => {
+    try {
+      const response = await axios.post("/api/loginStatus", {
+        id: generateSecureRandomString(10),
+        name: session.user.name,
+        ipAddress: ipAddress,
+        os: deviceInfo.os,
+        device: deviceInfo.device,
+      });
+      console.log("User status updated successfully:", response.data);
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response) {
+        console.error(
+          "Error updating user status:",
+          error.response.data.message
+        );
+      } else {
+        console.error("Unexpected error:", error);
+      }
+    }
+  };
+
+  updatedUserStatus();
   return (
     <div
-      className="bg-cover bg-no-repeat"
+      className="bg-cover bg-no-repeat p-4"
       style={{
         backgroundImage: `url('https://utfs.io/f/2b3b3987-bbf4-45fa-b3ee-f8d421b302cb-47qkr6.svg')`,
       }}
     >
-      <Link href="/">
-        {" "}
-        <div>
-          <Image
-            src="https://utfs.io/f/0ba271cb-ad24-4541-a7d5-a76acd52dd92-17tfp1.svg"
-            width={300}
-            height={100}
-            alt="logo"
-          ></Image>
+      <div className=" flex justify-between">
+        <Link href="/">
+          {" "}
+          <div className=" ">
+            <Image
+              src="https://utfs.io/f/0ba271cb-ad24-4541-a7d5-a76acd52dd92-17tfp1.svg"
+              width={300}
+              height={100}
+              alt="logo"
+            ></Image>
+          </div>
+        </Link>
+
+        <div className="flex items-center gap-x-8">
+          {isAdmin && (
+            <Link href="/admin/subscriber">
+              <Button className=" grad text-black rounded-full text-xl">
+                Admin Panel
+              </Button>
+            </Link>
+          )}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="border-none">
+              <div className=" text-center flex flex-col justify-center items-center">
+                <FaUser className="w-9 h-9 text-sky-500"></FaUser>{" "}
+                <p>{session?.user.name}</p>
+              </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-[400px] h-[200px] text-2xl">
+              <DropdownMenuLabel className=" text-2xl">
+                {session?.user.name}
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <h4 className="text-xl">User role : {session?.user.role}</h4>{" "}
+              </DropdownMenuItem>
+
+              <DropdownMenuItem>
+                {" "}
+                <Button
+                  className="grad"
+                  onClick={() => signOut({ redirect: false })}
+                >
+                  <MdLogout className="w-9 h-9"></MdLogout> <h4>Logout</h4>
+                </Button>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
-      </Link>
+      </div>
       <div className="py-10 flex flex-col gap-16">
         {data1.map((i) => (
           <div key={Math.random()} className="">

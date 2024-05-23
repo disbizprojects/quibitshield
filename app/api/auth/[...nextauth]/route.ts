@@ -13,6 +13,7 @@ declare module "next-auth" {
 import CredentialsProvider from "next-auth/providers/credentials";
 import { z } from "zod";
 import { NextResponse } from "next/server";
+import getUpdatedStatus from "@/app/admin/loginInfo/getUpdatedStatus";
 
 const prisma = new PrismaClient();
 const loginUserSchema = z.object({
@@ -24,28 +25,48 @@ const authOptions: AuthOptions = {
   providers: [
     CredentialsProvider({
       credentials: {
-        password: { type: "password", placeholder: "password" },
+        name: { label: "Name", type: "text", placeholder: "name" },
+        password: {
+          label: "Password",
+          type: "password",
+          placeholder: "password",
+        },
       },
       async authorize(credentials: any) {
-        if (!credentials) {
-          return Promise.resolve(null);
-        }
+        if (!credentials) return null;
 
         const user = await prisma.user.findUnique({
           where: {
-            id: 123334,
+            name: credentials.name,
+            password: credentials.password,
           },
         });
 
-        if (user && user.password === credentials.password) {
-          return Promise.resolve(user);
+        if (
+          user?.name === credentials.name &&
+          user?.password === credentials.password
+        ) {
+          return user;
         } else {
           return Promise.resolve(null);
         }
       },
     }),
   ],
-
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.role = user.role;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (token) {
+        session.user.role = token.role;
+      }
+      return session;
+    },
+  },
   pages: {
     signIn: "/dashboard",
     signOut: "/",

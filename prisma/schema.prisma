@@ -15,6 +15,7 @@ datasource db {
 
 model Account {
   id                 Int       @id @default(autoincrement())
+  statusId           String    
   compoundId         String    @unique @map(name: "compound_id")
   
   userId             Int       @map(name: "user_id")
@@ -47,16 +48,39 @@ model Session {
 
 model User {
   id            Int       @id @default(autoincrement())
-  name          String?
+  name          String    @unique
   password      String    
+  role          String
   
-  emailVerified DateTime? @map(name: "email_verified")
-  image         String?
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   updatedAt     DateTime  @default(now()) @map(name: "updated_at")
 
   @@map(name: "users")
 }
+
+model Admin {
+  id            Int       @id @default(autoincrement())
+  name          String?   @unique
+  password      String    
+  
+ 
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+
+  @@map(name: "admins")
+}
+
+model Login {
+  id        Int      @id @default(autoincrement())
+  statusId  String @unique
+  name      String
+  createdAt DateTime @default(now())
+  os        String
+  ipAddress String
+  location  String
+  // Other fields...
+}
+
 model EmailCollection{
   id            Int       @id @default(autoincrement())
   email String @unique

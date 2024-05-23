@@ -10,10 +10,12 @@ export default function Page() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const form = new FormData(e.target as HTMLFormElement);
+    const name = form.get("username") as string;
     const password = form.get("password") as string;
 
     try {
       const result = await signIn("credentials", {
+        name,
         password,
         redirect: false,
       });
@@ -30,7 +32,7 @@ export default function Page() {
   };
 
   return (
-    <div>
+    <div className="">
       <div className="items-center justify-center h-full gap-4 lg:flex">
         <div className="lg:w-[852px] lg:h-[700px] h-[500px] overflow-hidden flex items-center justify-center">
           <video
@@ -47,7 +49,15 @@ export default function Page() {
           </h1>
 
           <form onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-2">
+              <div className="grad  p-[1.5px] h-8 rounded-full">
+                <Input
+                  name="username"
+                  type="text"
+                  placeholder="USER NAME"
+                  className="w-full border-none rounded-full text-center h-full bg-black"
+                ></Input>
+              </div>
               <div className="grad p-[1.5px] h-8 rounded-full">
                 <Input
                   name="password"
