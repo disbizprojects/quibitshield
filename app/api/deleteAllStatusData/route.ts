@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-export default async function DELETE(req: NextRequest) {
+export async function DELETE(req: NextRequest) {
   try {
     await prisma.login.deleteMany(); // Add more models as necessary
 
