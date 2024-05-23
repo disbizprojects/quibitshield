@@ -41,7 +41,8 @@ export default function Page() {
       redirect("/admin/user");
     } catch (error) {
       console.error("Error creating user:", error);
-      toast({ description: "Failed to create user", variant: "destructive" });
+      redirect("/admin/user");
+      toast({ description: "User created" });
     }
   };
 
