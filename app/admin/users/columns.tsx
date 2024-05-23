@@ -86,25 +86,25 @@ export const columns: ColumnDef<Emails>[] = [
     accessorKey: "role",
     header: "Role",
   },
-  {
-    header: "Action",
-    cell: ({ row }) => {
-      // Extract the ID from the row data
-      const id = row.original.id;
+  // {
+  //   header: "Action",
+  //   cell: ({ row }) => {
+  //     // Extract the ID from the row data
+  //     const id = row.original.id;
 
-      return (
-        // Call deleteSubscriber on click
+  //     return (
+  //       // Call deleteSubscriber on click
 
-        <Link href={`/admin/changePassword/${id}`}>
-          <Button className="grad text-black">
-            {" "}
-            <MdChangeCircle className="" />
-            Change
-          </Button>
-        </Link>
-      );
-    },
-  },
+  //       <Link href={`/admin/changePassword/${id}`}>
+  //         <Button className="grad text-black">
+  //           {" "}
+  //           <MdChangeCircle className="" />
+  //           Change
+  //         </Button>
+  //       </Link>
+  //     );
+  //   },
+  // },
   {
     header: "Action",
     cell: ({ row }) => {
