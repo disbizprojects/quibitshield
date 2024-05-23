@@ -22,6 +22,7 @@ export default function page() {
             autoPlay
             muted
             loop
+            playsInline
           ></video>
         </div>
         <div className="lg:w-[40%] flex flex-col gap-4">
