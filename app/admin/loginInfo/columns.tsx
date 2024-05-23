@@ -81,7 +81,7 @@ export const columns: ColumnDef<Emails>[] = [
     cell: ({ row }) => {
       const deleteSubscriber = useDeleteSubscriber();
       // Extract the ID from the row data
-      const id = row.id;
+      const id = row.original.id;
 
       return (
         <Button

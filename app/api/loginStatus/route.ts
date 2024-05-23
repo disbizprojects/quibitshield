@@ -2,7 +2,6 @@ import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 
 // Set the runtime to Edge
-export const runtime = "edge";
 
 const prisma = new PrismaClient();
 

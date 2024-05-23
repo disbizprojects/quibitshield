@@ -31,6 +31,7 @@ const useDeleteSubscriber = () => {
         });
         toast({ description: " Deleted Successfully" });
         router.refresh();
+        router.refresh();
       } catch (error) {
         toast({ description: "Internal Error", variant: "destructive" });
         console.error("Failed to delete user:", error);
