@@ -1,6 +1,9 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 
+// Set the runtime to Edge
+export const runtime = "edge";
+
 const prisma = new PrismaClient();
 
 interface RequestBody {
@@ -68,7 +71,3 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     }
   }
 }
-
-export const config = {
-  runtime: "edge",
-};
