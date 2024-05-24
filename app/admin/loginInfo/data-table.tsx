@@ -41,6 +41,8 @@ interface DataTableProps<TData, TValue> {
 }
 import { PrismaClient } from "@prisma/client";
 import { toast, useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 
 export function DataTable<TData, TValue>({
   columns,
@@ -63,31 +65,23 @@ export function DataTable<TData, TValue>({
       columnFilters,
     },
   });
+  const router = useRouter();
   const { toast } = useToast();
   const prisma = new PrismaClient();
-  async function deleteAllData() {
+  const deleteAllStatus = async () => {
     try {
-      // Add the names of all your models here
-      await prisma.login.deleteMany({});
-      // Add more models as necessary
-
-      toast({
-        description: "All data deleted successfully",
-        variant: "default",
-      });
-
-      console.log("All data deleted successfully.");
+      await axios.delete("/api/deleteAllStatusData");
+      toast({ description: "All subcriber Deleted successfully" });
+      router.refresh();
     } catch (error) {
-      console.error("Error deleting data:", error);
-
       toast({
-        description: "Something went wrong. Try again",
+        description: "Something went wrong plaease try again",
         variant: "destructive",
       });
-    } finally {
-      await prisma.$disconnect();
+      router.refresh();
+      console.log("Deletetion unsuccessfull");
     }
-  }
+  };
 
   return (
     <div className="rounded-md border w-full">
@@ -100,7 +94,7 @@ export function DataTable<TData, TValue>({
           }
           className="lg:max-w-[30%] w-[300px] bg-none text-black"
         />
-        {/* <Dialog>
+        <Dialog>
           <DialogTrigger>
             <Button className="bg-red-500">Delete All</Button>
           </DialogTrigger>
@@ -116,7 +110,7 @@ export function DataTable<TData, TValue>({
                 <DialogClose asChild>
                   <Button
                     type="button"
-                    onClick={deleteAllData}
+                    onClick={deleteAllStatus}
                     className="bg-red-500"
                   >
                     Delete All
@@ -125,7 +119,7 @@ export function DataTable<TData, TValue>({
               </DialogFooter>
             </DialogHeader>
           </DialogContent>
-        </Dialog> */}
+        </Dialog>
       </div>
 
       <Table>

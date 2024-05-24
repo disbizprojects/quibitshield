@@ -70,6 +70,7 @@ export function DataTable<TData, TValue>({
     try {
       await axios.delete("/api/deleteAllSubscriber");
       toast({ description: "All subcriber Deleted successfully" });
+      router.refresh();
     } catch (error) {
       toast({
         description: "Something went wrong plaease try again",

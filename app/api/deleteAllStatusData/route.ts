@@ -1,19 +1,21 @@
-// pages/api/deleteAllData.js
-import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function DELETE(req: NextRequest) {
+export async function DELETE(request: NextRequest) {
   try {
-    await prisma.login.deleteMany(); // Add more models as necessary
-
-    console.log("All data deleted successfully.");
-    return new NextResponse("Success", { status: 200 });
+    // Delete all records in the EmailCollection model
+    await prisma.login.deleteMany();
+    return NextResponse.json(
+      { message: "All records deleted successfully" },
+      { status: 200 }
+    );
   } catch (error) {
-    console.error("Error deleting data:", error);
-    return new NextResponse("Internal Error", { status: 500 });
-  } finally {
-    await prisma.$disconnect();
+    console.error(error);
+    return NextResponse.json(
+      { error: "Failed to delete records" },
+      { status: 500 }
+    );
   }
 }

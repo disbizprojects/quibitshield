@@ -344,7 +344,7 @@ export default function Page() {
           </div>
         </Link>
 
-        <div className="flex items-center gap-x-8">
+        <div className="flex lg:flex-row flex-col-reverse gap-2 items-center gap-x-8">
           {isAdmin && (
             <Link href="/admin/subscriber">
               <Button className=" grad text-black rounded-full lg:text-xl  ">
