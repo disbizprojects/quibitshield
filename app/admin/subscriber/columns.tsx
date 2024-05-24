@@ -8,6 +8,7 @@ import axios from "axios";
 import { ArrowUpDown, Delete } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
+import useFormattedLocalTime from "../loginInfo/time";
 
 // Define the type for subscriber data
 export type Emails = {
@@ -25,7 +26,7 @@ const useDeleteSubscriber = () => {
         await axios.delete("/api/deleteSubscriber", {
           data: { id }, // Ensure the correct payload is sent
         });
-        toast({ description: "Email Deleted Successfull" });
+        toast({ description: "Email Deleted Successfully" });
         router.refresh();
       } catch (error) {
         toast({ description: "Internal Error", variant: "destructive" });
@@ -38,28 +39,28 @@ const useDeleteSubscriber = () => {
 
 // Define the columns for the table
 export const columns: ColumnDef<Emails>[] = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
+  //   {
+  //     id: "select",
+  //     header: ({ table }) => (
+  //       <Checkbox
+  //         checked={
+  //           table.getIsAllPageRowsSelected() ||
+  //           (table.getIsSomePageRowsSelected() && "indeterminate")
+  //         }
+  //         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+  //         aria-label="Select all"
+  //       />
+  //     ),
+  //     cell: ({ row }) => (
+  //       <Checkbox
+  //         checked={row.getIsSelected()}
+  //         onCheckedChange={(value) => row.toggleSelected(!!value)}
+  //         aria-label="Select row"
+  //       />
+  //     ),
+  //     enableSorting: false,
+  //     enableHiding: false,
+  //   },
   {
     accessorKey: "id",
     header: "ID",
@@ -81,6 +82,9 @@ export const columns: ColumnDef<Emails>[] = [
   {
     accessorKey: "sendedAt",
     header: "Sended At",
+    cell({ row }) {
+      return useFormattedLocalTime(row.original.sendedAt);
+    },
   },
   {
     header: "Action",

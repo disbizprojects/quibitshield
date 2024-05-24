@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export async function DELETE(req: NextRequest) {
   try {
     const { id } = await req.json();
-    const deletedEmail = await prisma.login.delete({
+    const deletedEmail = await prisma.emailCollection.delete({
       where: {
         id: Number(id),
       },

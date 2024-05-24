@@ -114,10 +114,10 @@ export const columns: ColumnDef<Emails>[] = [
 
       return (
         <Button
-          className="bg-red-500"
+          className="bg-red-500 text-xs"
           onClick={() => deleteSubscriber(Number(id))} // Call deleteSubscriber on click
         >
-          <Delete className="w-9 h-9" />
+          <Delete className="lg:w-9 lg:h-9" />
           Delete
         </Button>
       );

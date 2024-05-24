@@ -41,6 +41,7 @@ export default function Page() {
             autoPlay
             muted
             loop
+            playsInline
           ></video>
         </div>
         <div className="flex flex-col gap-4 justify-center items-center">

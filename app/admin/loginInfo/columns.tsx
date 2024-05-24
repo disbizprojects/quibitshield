@@ -8,6 +8,7 @@ import axios from "axios";
 import { ArrowUpDown, Delete } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
+import useFormattedLocalTime from "./time";
 
 // Define the type for subscriber data
 export type Emails = {
@@ -62,6 +63,9 @@ export const columns: ColumnDef<Emails>[] = [
   {
     accessorKey: "createdAt",
     header: "Logged in",
+    cell({ row }) {
+      return useFormattedLocalTime(row.original.createdAt);
+    },
   },
   {
     accessorKey: "ipAddress",

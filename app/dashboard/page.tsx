@@ -347,7 +347,7 @@ export default function Page() {
         <div className="flex items-center gap-x-8">
           {isAdmin && (
             <Link href="/admin/subscriber">
-              <Button className=" grad text-black rounded-full text-xl">
+              <Button className=" grad text-black rounded-full lg:text-xl  ">
                 Admin Panel
               </Button>
             </Link>

@@ -74,7 +74,7 @@ model Login {
   id        Int      @id @default(autoincrement())
   statusId  String @unique
   name      String
-  createdAt DateTime @default(now())
+  createdAt DateTime @default(now()) @db.Timestamp(3)
   os        String
   ipAddress String
   location  String
@@ -84,7 +84,7 @@ model Login {
 model EmailCollection{
   id            Int       @id @default(autoincrement())
   email String @unique
-  sendedAt DateTime  @default(now()) 
+  sendedAt DateTime  @default(now()) @db.Timestamp(3) 
 
 }
 

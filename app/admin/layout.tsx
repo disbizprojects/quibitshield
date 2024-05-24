@@ -17,6 +17,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 export default function AdminLayout({
   children,
@@ -78,7 +87,7 @@ export default function AdminLayout({
           <DropdownMenu>
             <DropdownMenuTrigger className="border-none">
               <div className=" text-center flex flex-col justify-center items-center">
-                <FaUser className="w-9 h-9 text-sky-500"></FaUser>{" "}
+                <FaUser className="lg:w-9 lg:h-9 w-4 h-4 text-sky-500"></FaUser>{" "}
                 <p>{session?.user.name}</p>
               </div>
             </DropdownMenuTrigger>
@@ -97,24 +106,54 @@ export default function AdminLayout({
                   className="grad"
                   onClick={() => signOut({ redirect: false })}
                 >
-                  <MdLogout className="w-9 h-9"></MdLogout> <h4>Logout</h4>
+                  <MdLogout className="lg:w-9  lg:h-9"></MdLogout>{" "}
+                  <h4>Logout</h4>
                 </Button>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
       </div>
-      <div>
+      <div className="">
         <h1 className="lg:text-4xl text-3xl">Admin Panel</h1>
         <hr className="w-[20%] h-1 my-4 grad border-0 rounded"></hr>
+        <div className="lg:hidden py-4">
+          <Sheet>
+            <SheetTrigger>
+              <Menu></Menu>
+            </SheetTrigger>
+            <SheetContent side="left" className="bg-black">
+              <Link href="/">
+                {" "}
+                <div className=" ">
+                  <Image
+                    src="https://utfs.io/f/0ba271cb-ad24-4541-a7d5-a76acd52dd92-17tfp1.svg"
+                    width={300}
+                    height={100}
+                    alt="logo"
+                  ></Image>
+                </div>
+              </Link>
+              <div className="w-[280px] lg:block  h-full flex flex-col gap-4 p-4">
+                {sidebarButtons.map((i) => (
+                  <Link href={i.link}>
+                    <Button className="grad text-black w-full">{i.name}</Button>
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
-      <div className="flex">
-        <div className="w-[280px] border-r h-full flex flex-col gap-4 p-4">
-          {sidebarButtons.map((i) => (
-            <Link href={i.link}>
-              <Button className="grad text-black w-full">{i.name}</Button>
-            </Link>
-          ))}
+      <div className="flex gap-2">
+        <div className="hidden lg:block">
+          <div className="w-[280px]    border-r h-full flex flex-col gap-4 p-4">
+            {sidebarButtons.map((i) => (
+              <Link href={i.link}>
+                <Button className="grad text-black w-full">{i.name}</Button>
+              </Link>
+            ))}
+          </div>
         </div>
         {children}
       </div>

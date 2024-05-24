@@ -42,7 +42,6 @@ export default function Page() {
     } catch (error) {
       console.error("Error creating user:", error);
       redirect("/admin/user");
-      toast({ description: "User created" });
     }
   };
 

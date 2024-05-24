@@ -90,15 +90,15 @@ export function DataTable<TData, TValue>({
   }
 
   return (
-    <div className="rounded-md border">
-      <div className="flex items-center justify-between  py-4 px-8 gap-4">
+    <div className="rounded-md border w-full">
+      <div className="flex items-center justify-between w-full  py-4 px-8 gap-4">
         <Input
           placeholder="Name"
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
           }
-          className="max-w-[30%] bg-none text-black"
+          className="lg:max-w-[30%] w-[300px] bg-none text-black"
         />
         {/* <Dialog>
           <DialogTrigger>

@@ -11,6 +11,15 @@ import {
   ColumnFiltersState,
   getFilteredRowModel,
 } from "@tanstack/react-table";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 import {
   Table,
@@ -23,6 +32,10 @@ import {
 import React from "react";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -50,10 +63,26 @@ export function DataTable<TData, TValue>({
       columnFilters,
     },
   });
+  const { toast } = useToast();
+  const router = useRouter();
+
+  const deleteAllSubscriber = async () => {
+    try {
+      await axios.delete("/api/deleteAllSubscriber");
+      toast({ description: "All subcriber Deleted successfully" });
+    } catch (error) {
+      toast({
+        description: "Something went wrong plaease try again",
+        variant: "destructive",
+      });
+      router.refresh();
+      console.log("Deletetion unsuccessfull");
+    }
+  };
 
   return (
-    <div className="rounded-md border">
-      <div className="flex items-center py-4 px-4">
+    <div className="rounded-md border w-full">
+      <div className="flex items-center justify-between py-4 px-4">
         <Input
           placeholder="Filter emails..."
           value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
@@ -62,6 +91,27 @@ export function DataTable<TData, TValue>({
           }
           className="w-[40%]"
         />
+        <Dialog>
+          <DialogTrigger>
+            {" "}
+            <Button className="bg-red-500">Deltete All</Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle className="text-2xl text-black">
+                Are you absolutely sure?
+              </DialogTitle>
+              <DialogDescription>
+                All subscribter record will parmanently deleted
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter>
+              <Button className="bg-red-500" onClick={deleteAllSubscriber}>
+                Deltete All
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
 
       <Table>
