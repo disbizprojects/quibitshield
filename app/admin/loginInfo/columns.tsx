@@ -29,7 +29,7 @@ const useDeleteSubscriber = () => {
         await axios.delete("/api/deleteStatus", {
           data: { id }, // Ensure the correct payload is sent
         });
-        toast({ description: "Email Deleted Successfully" });
+        toast({ description: "Deleted Successfully" });
         router.refresh();
       } catch (error) {
         toast({ description: "Internal Error", variant: "destructive" });
