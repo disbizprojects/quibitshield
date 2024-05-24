@@ -243,8 +243,8 @@ export default function Page() {
         <p>
           As governments and organizations worldwide recognize the urgency of
           preparing for the quantum computing threat, investment in post-quantum
-          cryptographic soluti that can protect these vital systems will become
-          increasingly appealing.
+          cryptographic solutions that can protect these vital systems will
+          become increasingly appealing.
         </p>,
         <p>
           Furthermore, the company's expertise in lattice-based encryption and
