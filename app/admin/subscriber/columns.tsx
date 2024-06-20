@@ -81,7 +81,7 @@ export const columns: ColumnDef<Emails>[] = [
   },
   {
     accessorKey: "sendedAt",
-    header: "Sended At",
+    header: "Date Joined",
     cell({ row }) {
       return useFormattedLocalTime(row.original.sendedAt);
     },
