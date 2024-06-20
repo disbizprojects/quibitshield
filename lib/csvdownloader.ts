@@ -1,3 +1,8 @@
+type DataItem = {
+  id: string;
+  email: string;
+  sendedAt: string;
+};
 import { convertToCSV } from "./csvConverter";
 
 export const downloadCSV = (data: DataItem[], filename: string): void => {
