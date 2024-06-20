@@ -36,6 +36,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { downloadCSV } from "@/lib/csvdownloader";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -92,27 +93,36 @@ export function DataTable<TData, TValue>({
           }
           className="w-[40%]"
         />
-        <Dialog>
-          <DialogTrigger>
-            {" "}
-            <Button className="bg-red-500">Deltete All</Button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle className="text-2xl text-black">
-                Are you absolutely sure?
-              </DialogTitle>
-              <DialogDescription>
-                All subscribter record will parmanently deleted
-              </DialogDescription>
-            </DialogHeader>
-            <DialogFooter>
-              <Button className="bg-red-500" onClick={deleteAllSubscriber}>
-                Deltete All
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+        <div className="flex gap-4">
+          {" "}
+          <Button
+            className="grad text-black"
+            onClick={() => downloadCSV(data, "Registered_email.csv")}
+          >
+            Download All
+          </Button>
+          <Dialog>
+            <DialogTrigger>
+              {" "}
+              <Button className="bg-red-500">Deltete All</Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle className="text-2xl text-black">
+                  Are you absolutely sure?
+                </DialogTitle>
+                <DialogDescription>
+                  All subscribter record will parmanently deleted
+                </DialogDescription>
+              </DialogHeader>
+              <DialogFooter>
+                <Button className="bg-red-500" onClick={deleteAllSubscriber}>
+                  Deltete All
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        </div>
       </div>
 
       <Table>
