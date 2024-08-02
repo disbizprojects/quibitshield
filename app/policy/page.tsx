@@ -40,15 +40,15 @@ export default function Policy() {
           Website?
         </h1>
         <p>
-          "Like most websites, QubitShield.io collects
-          non-personally-identifying information of the sort that web browsers
-          and servers typically make available, such as the browser type,
-          language preference, referring site, and the date and time of each
-          visitor request. Our purpose in collecting non-personally identifying
-          information is to better understand how visitors use our website. We
-          also collect information like Internet Protocol (IP) addresses. We do
-          not use such information to identify visitors and we do not disclose
-          such information to third parties unless legally obliged to do so."
+          Like most websites, QubitShield.io collects non-personally-identifying
+          information of the sort that web browsers and servers typically make
+          available, such as the browser type, language preference, referring
+          site, and the date and time of each visitor request. Our purpose in
+          collecting non-personally identifying information is to better
+          understand how visitors use our website. We also collect information
+          like Internet Protocol (IP) addresses. We do not use such information
+          to identify visitors and we do not disclose such information to third
+          parties unless legally obliged to do so.
         </p>
         <p>
           When registering or submitting a form on our web site, as appropriate,
@@ -135,7 +135,7 @@ export default function Policy() {
       <div>
         <h1>Third-party links</h1>
         <p>
-          We do not include or offer third-party products or sevices on our
+          We do not include or offer third-party products or services on our
           website
         </p>
       </div>
@@ -155,7 +155,7 @@ export default function Policy() {
           our Privacy Policy. Your continued use of this site after any change
           in this Privacy Policy will constitute your acceptance of such change.
         </p>
-        <div className="text-xs ">Last Edited on May 10, 2024.</div>
+        <div className="text-xs ">Last Edited on August 1, 2024.</div>
       </div>
     </div>
   );

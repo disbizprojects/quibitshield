@@ -27,24 +27,26 @@ export default function page() {
         </div>
         <div className="lg:w-[40%] flex flex-col gap-4">
           <h1 className="text-white lg:text-2xl text-xl text-wrap">
-            Enhanced IoT, smart cities, payments & FinTech using advanced
-            post-quantum cryptography and AI, fostering innovation and ensuring
-            data sovereignty.{" "}
+            Enhancing IoT, smart cities, payments, and FinTech with advanced
+            post-quantum cryptography and AI. We foster innovation while
+            ensuring data sovereignty.
           </h1>
           <hr className="w-[50%] h-1  my-4 grad  border-0 rounded"></hr>
           <div className=" flex flex-col gap-4">
             <p>
-              We have chosen to operate in stealth mode for the ﬁrst year while
-              we build our cryptosystem and integrate it with select open-source
-              software.
+              We have chosen to operate in stealth mode while we build our
+              cryptosystems, submit them for Common Criteria accreditation, and
+              integrate with select open-source software. Our cryptology team
+              continuously improves upon standardized post-quantum cryptographic
+              systems and develops future-standard systems. We have filed
+              innovative patent applications with significant real-world market
+              applicability.
             </p>
             <p>
               For inquiries about investing, becoming a customer, joining our
-              team, or anything else, please email us.
-            </p>
-            <p>
-              We welcome your interest in our Post-Quantum Cryptographic
-              solutions and are eager to help you learn more.
+              team, or any other questions, please email us. We welcome your
+              interest in our market-driven post-quantum cryptographic
+              solutions.
             </p>
           </div>
           <div className="flex flex-col gap-2">
