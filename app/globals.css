@@ -119,4 +119,7 @@
   b {
     @apply font-[Axiforma-heavy] text-xl;
   }
+  strong {
+    @apply font-[Axiforma-heavy];
+  }
 }
