@@ -34,7 +34,7 @@ export default function Secure() {
           </h1>
           <hr className="w-[50%] h-2  my-4 grad  border-0 rounded"></hr>
         </section>
-        <section className="flex lg:flex-row items-center flex-col gap-8">
+        <section className="flex lg:flex-row  flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p>
               <b className="text-lg mr-2">IoT and Smart Cities:</b>
@@ -60,7 +60,7 @@ export default function Secure() {
               optimizing resource use and defending against quantum attacks.
             </p>
           </div>
-          <div className="lg:w-1/2 w-full overflow-hidden flex h-auto justify-center">
+          <div className="lg:w-1/2 w-full lg:-mt-36 overflow-hidden flex h-auto justify-center">
             <Image
               src="/6.jpg"
               width={500}
@@ -72,7 +72,7 @@ export default function Secure() {
         </section>
         <section>
           <div>
-            <b className="text-lg mr-2">IoT and Smart Cities:</b>
+            <b className="text-lg mr-2">FinTech/Blockchain/Web3:</b>
             <div className="ml-4">
               {feature.map((i) => (
                 <p className="text-lg">

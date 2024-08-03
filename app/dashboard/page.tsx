@@ -97,7 +97,7 @@ export default function Page() {
 
         <div className="flex lg:flex-row flex-col-reverse gap-2 items-center gap-x-8">
           <a
-            href="https://utfs.io/f/9d528147-0cba-4e8c-a290-53d3d79c483f-b5vi6f"
+            href="https://utfs.io/f/88661961-a3ef-45df-bb2e-fbfada64be57-ubdmr0.pdf"
             download
           >
             <Button className="rounded-full grad text-black mx-auto">
@@ -151,7 +151,7 @@ export default function Page() {
       </div>
       <div className="w-full flex justify-center">
         <a
-          href="https://utfs.io/f/9d528147-0cba-4e8c-a290-53d3d79c483f-b5vi6f"
+          href="https://utfs.io/f/88661961-a3ef-45df-bb2e-fbfada64be57-ubdmr0.pdf"
           download
         >
           <Button className="rounded-full grad text-black mx-auto">
@@ -169,6 +169,7 @@ export default function Page() {
             <FaXTwitter className="grad w-9 h-9 p-1 rounded-full text-black" />
             <a href="https://twitter.com/QubitShield">@QubitShield</a>
           </div>
+          <p className="text-sm">&copy; 2024 Qubit Shield Cryptology,Inc.</p>
         </div>
       </div>
     </div>

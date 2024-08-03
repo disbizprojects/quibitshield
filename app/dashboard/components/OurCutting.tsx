@@ -110,7 +110,7 @@ export default function OurCutting() {
               <span> {i.description}</span>
             </p>
           ))}
-          <p className="mt-10">
+          <p className="mt-4">
             This multifaceted utilization of hidden channels fortifies our
             cryptosystems against quantum attacks, ensuring robust security
             while enhancing system performance and functionality.
@@ -216,7 +216,7 @@ export default function OurCutting() {
           </div>
           <p className="mt-10">
             Join us in securing the future. Partner with QubitShield and invest
-            in the forefront of post- quantum cryptography.
+            in the forefront of post-quantum cryptography.
           </p>
         </section>
       </main>
