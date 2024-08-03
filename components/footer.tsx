@@ -28,9 +28,11 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex md:text-start text-center flex-col  lg:flex-row text-sm gap-2 lg:-mt-5">
-        <p>Copyright @ 2024 QubitShield.io</p>
-        <Link href="/policy" className="hover:underline">
-          <p>Privacy Policy</p>
+        <p className="text-sm">
+          Copyright &copy; 2024 Qubit Shield Cryptology,Inc.
+        </p>
+        <Link href="/policy" className="hover:underline text-sm">
+          <p className="text-sm">Privacy Policy</p>
         </Link>
       </div>
     </div>

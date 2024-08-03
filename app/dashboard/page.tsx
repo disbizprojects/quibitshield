@@ -66,7 +66,6 @@ export default function Page() {
         os: deviceInfo.os,
         device: deviceInfo.device,
       });
-      console.log("User status updated successfully:", response.data);
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
         console.error(
@@ -88,17 +87,26 @@ export default function Page() {
           <div className=" ">
             <Image
               src="https://utfs.io/f/0ba271cb-ad24-4541-a7d5-a76acd52dd92-17tfp1.svg"
-              width={300}
-              height={100}
+              width={400}
+              height={300}
               alt="logo"
+              className="lg:w-[400px] w-[200px]"
             ></Image>
           </div>
         </Link>
 
         <div className="flex lg:flex-row flex-col-reverse gap-2 items-center gap-x-8">
+          <a
+            href="https://utfs.io/f/9d528147-0cba-4e8c-a290-53d3d79c483f-b5vi6f"
+            download
+          >
+            <Button className="rounded-full grad text-black mx-auto">
+              Click to open or download our deck
+            </Button>
+          </a>
           {isAdmin && (
             <Link href="/admin/subscriber">
-              <Button className=" grad text-black rounded-full lg:text-xl  ">
+              <Button className=" rounded-full grad text-black mx-auto  ">
                 Admin Panel
               </Button>
             </Link>
@@ -143,7 +151,7 @@ export default function Page() {
       </div>
       <div className="w-full flex justify-center">
         <a
-          href="https://utfs.io/f/8162a6e9-43e6-4787-8298-34835d43cab3-1t4yvn.pptx"
+          href="https://utfs.io/f/9d528147-0cba-4e8c-a290-53d3d79c483f-b5vi6f"
           download
         >
           <Button className="rounded-full grad text-black mx-auto">

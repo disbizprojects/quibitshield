@@ -1,5 +1,7 @@
+import { Dot } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import Bullet from "./Bullet";
 
 export default function Advnaced() {
   const data = [
@@ -41,14 +43,15 @@ export default function Advnaced() {
           </p>
           <div>
             <div className="flex dashboard flex-col-reverse lg:flex-row  justify-between items-center w-full  gap-8">
-              <div className="lg:w-[80%] w-full flex flex-col gap-4 ">
+              <div className="lg:w-[80%] w-full flex flex-col  ">
                 {" "}
                 {data.slice(0, 3).map((i) => (
-                  <p className="text-xl">
-                    <b className="">
-                      <span className="text-2xl font-extrabold">.</span>
+                  <p className="">
+                    <b>
+                      <Bullet></Bullet>
                       {i.name}:
                     </b>
+
                     <span> {i.description}</span>
                   </p>
                 ))}
@@ -65,7 +68,7 @@ export default function Advnaced() {
             </div>
             <p className="text-xl ">
               <b className="">
-                <span className="text-2xl font-extrabold">.</span>
+                <Bullet></Bullet>
                 {data[3].name}:
               </b>
               <span className=""> {data[3].description}</span>

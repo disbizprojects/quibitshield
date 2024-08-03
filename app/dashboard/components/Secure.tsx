@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Bullet from "./Bullet";
 
 export default function Secure() {
   const feature = [
@@ -74,11 +75,11 @@ export default function Secure() {
             <b className="text-lg mr-2">IoT and Smart Cities:</b>
             <div className="ml-4">
               {feature.map((i) => (
-                <p className="">
-                  <b className="text-sm">
-                    <b className="  font-extrabold">.</b>
+                <p className="text-lg">
+                  <span className=" font-[Axiforma-heavy]">
+                    <Bullet></Bullet>
                     {i.feature}:
-                  </b>
+                  </span>
                   <span> {i.description}</span>
                 </p>
               ))}

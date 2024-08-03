@@ -8,10 +8,7 @@ export default function Embracing() {
       <div className="flex lg:flex-row-reverse flex-col-reverse gap-2    justify-center">
         <div className="lg:w-1/2">
           {" "}
-          <h1 className=" lg:text-4xl text-3xl ">
-            Preparing for the Quantum Revolution: Securing the Future with
-            QubitShield
-          </h1>
+          <h1 className=" lg:text-4xl text-3xl ">Embracing he Quantam Era</h1>
           <hr className="w-[50%] h-2  my-4 grad  border-0 rounded"></hr>
           <div className="flex dashboard flex-col lg:flex-row justify-between items-center w-full  gap-8">
             <p className="text-xl  font-bold">

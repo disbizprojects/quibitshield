@@ -111,13 +111,13 @@
     @apply bg-background text-foreground text-white;
   }
   p {
-    @apply font-[Axiforma-thin];
+    @apply font-[Axiforma-thin] text-xl font-bold;
   }
   li {
-    @apply font-[Axiforma-thin];
+    @apply font-[Axiforma-thin]  text-xl font-bold;
   }
   b {
-    @apply font-[Axiforma-heavy] text-xl;
+    @apply font-[Axiforma-heavy] text-xl font-bold;
   }
   strong {
     @apply font-[Axiforma-heavy];

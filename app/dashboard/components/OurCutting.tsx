@@ -1,6 +1,7 @@
 import { Dot } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import Bullet from "./Bullet";
 
 export default function OurCutting() {
   const feature1 = [
@@ -75,10 +76,11 @@ export default function OurCutting() {
               further. Our patent-pending innovations enhance these foundational
               technologies, providing unique advantages:
             </p>
-            <strong className="flex text-xl">
-              <Dot></Dot>Utilizing Hidden Channels for Comprehensive
+            <b className="flex text-xl  items-center">
+              {" "}
+              <Bullet></Bullet> Utilizing Hidden Channels for Comprehensive
               Cryptographic Functionality
-            </strong>
+            </b>
             <p>
               Our innovative use of hidden channels enables a range of advanced
               functionalities by embedding meta-data within random seeds and
@@ -98,11 +100,11 @@ export default function OurCutting() {
             ></Image>
           </div>
         </section>
-        <section className="lg:w-[70%]">
+        <section className="lg:w-[70%] ml-4">
           {feature1.map((i) => (
             <p className="">
               <b className="text-lg">
-                <b className="  font-extrabold">.</b>
+                <Bullet></Bullet>
                 {i.name}:
               </b>
               <span> {i.description}</span>
@@ -115,9 +117,13 @@ export default function OurCutting() {
           </p>
         </section>
         <section className="flex flex-col gap-8">
-          <strong className="flex text-xl">
-            <Dot></Dot>Dynamic Identity Management: Revolutionizing IBE Security
-            with Adaptive Identities
+          <strong className="flex text-xl items-center">
+            <b>
+              {" "}
+              <Bullet></Bullet>
+            </b>
+            Dynamic Identity Management: Revolutionizing IBE Security with
+            Adaptive Identities
           </strong>
           <p>
             Our pioneering method for Coalescing Unordered Sub-Identities within
@@ -142,12 +148,17 @@ export default function OurCutting() {
           </div>
           <div>
             <h1 className="text-lg">Key Advantages</h1>
-            {feature2.map((i) => (
-              <p className="">
-                <b className="text-sm">{i.feature}:</b>
-                <span> {i.description}</span>
-              </p>
-            ))}
+            <div className=" ml-4">
+              {feature2.map((i) => (
+                <p className="text-lg">
+                  <span className=" font-[Axiforma-heavy]">
+                    <Bullet></Bullet>
+                    {i.feature}:
+                  </span>
+                  <span> {i.description}</span>
+                </p>
+              ))}
+            </div>
           </div>
         </section>
         <section>
