@@ -62,7 +62,7 @@ export default function OurCutting() {
   return (
     <>
       {" "}
-      <main className="flex flex-col gap-8">
+      <main className="flex flex-col gap-4">
         <section className="flex lg:flex-row flex-col w-full">
           <div className="lg:w-[70%] flex flex-col gap-4">
             {" "}
@@ -78,8 +78,8 @@ export default function OurCutting() {
             </p>
             <b className="flex text-xl  items-center">
               {" "}
-              <Bullet></Bullet> Utilizing Hidden Channels for Comprehensive
-              Cryptographic Functionality
+              Utilizing Hidden Channels for Comprehensive Cryptographic
+              Functionality
             </b>
             <p>
               Our innovative use of hidden channels enables a range of advanced
@@ -116,12 +116,8 @@ export default function OurCutting() {
             while enhancing system performance and functionality.
           </p>
         </section>
-        <section className="flex flex-col gap-8">
+        <section className="flex flex-col gap-2">
           <strong className="flex text-xl items-center">
-            <b>
-              {" "}
-              <Bullet></Bullet>
-            </b>
             Dynamic Identity Management: Revolutionizing IBE Security with
             Adaptive Identities
           </strong>

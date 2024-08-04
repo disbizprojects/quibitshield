@@ -27,7 +27,7 @@ export default function Prepare() {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full overflow-hidden flex h-auto justify-center">
+        <div className="lg:w- w-full overflow-hidden flex h-auto justify-center">
           <Image
             src="/1.jpg"
             width={500}
