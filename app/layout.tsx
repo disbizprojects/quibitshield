@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="   dark:bg-black">
       <SessionProvider>
-        <body className="font-[Axiforma-heavy] bg-black p-4  lg:py-2 lg:px-32">
+        <body className="font-[Axiforma-heavy] bg-black p-4  lg:py-2 lg:px-16">
           {children}
         </body>
         <Toaster />

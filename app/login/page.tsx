@@ -49,7 +49,7 @@ export default function Page() {
             Welcome!
           </h1>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} autoComplete="off">
             <div className="flex flex-col gap-2">
               <div className="grad  p-[1.5px] h-8 rounded-full">
                 <Input
@@ -57,6 +57,7 @@ export default function Page() {
                   type="text"
                   placeholder="USER NAME"
                   className="w-full border-none rounded-full text-center h-full bg-black"
+                  autoComplete="off"
                 ></Input>
               </div>
               <div className="grad p-[1.5px] h-8 rounded-full">
@@ -65,6 +66,7 @@ export default function Page() {
                   type="password"
                   placeholder="ENTER PASSWORD"
                   className="w-full border-none rounded-full text-center h-full bg-black"
+                  autoComplete="off"
                 ></Input>
               </div>
               <div>

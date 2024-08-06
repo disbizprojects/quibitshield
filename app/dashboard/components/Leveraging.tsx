@@ -5,7 +5,7 @@ export default function Leveraging() {
   return (
     <div className="flex justify-center flex-col  gap-8">
       <div className="flex lg:flex-row flex-col gap-4">
-        <div className="lg:w-1/2 w-full overflow-hidden flex h-auto justify-center">
+        <div className="lg:w-[40%] w-full overflow-hidden flex h-auto justify-center">
           <Image
             src="/7.png"
             width={500}
@@ -14,7 +14,7 @@ export default function Leveraging() {
             className="w-[400px] h-[400px] object-cover"
           ></Image>
         </div>
-        <div className="lg:w-1/2 w-full">
+        <div className="lg:w-[60%] w-full">
           {" "}
           <h1 className=" lg:text-4xl text-3xl ">
             Leveraging QubitShield in Open-Source Solutions

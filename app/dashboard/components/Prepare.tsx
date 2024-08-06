@@ -8,12 +8,12 @@ export default function Prepare() {
       <div className="flex justify-center flex-col-reverse lg:flex-row gap-8">
         <div className="lg:w-1/2 w-full">
           {" "}
-          <h1 className=" lg:text-4xl text-3xl ">
+          <h1 className=" lg:text-4xl text-xl lg:text-nowrap text-wrap ">
             Preparing for the Quantum Revolution
           </h1>
           <hr className="w-[50%] h-2  my-4 grad  border-0 rounded"></hr>
           <div className="flex dashboard flex-col lg:flex-row justify-between items-center w-full  gap-8">
-            <p className="text-xl  font-bold">
+            <p className="text-xl   font-bold">
               As quantum computing rapidly advances, the looming threat it poses
               to current encryption and authentication methods becomes
               increasingly clear. In a world where quantum computers can
@@ -27,7 +27,7 @@ export default function Prepare() {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full overflow-hidden flex h-auto justify-center">
+        <div className="lg:w-1/2 w-full overflow-hidden flex h-auto lg:justify-end justify-center">
           <Image
             src="/1.jpg"
             width={500}

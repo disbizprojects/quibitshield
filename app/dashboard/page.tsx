@@ -131,7 +131,9 @@ export default function Page() {
                 {" "}
                 <Button
                   className="grad"
-                  onClick={() => signOut({ redirect: false })}
+                  onClick={() =>
+                    signOut({ redirect: true, callbackUrl: "/login" })
+                  }
                 >
                   <MdLogout className="w-9 h-9"></MdLogout> <h4>Logout</h4>
                 </Button>

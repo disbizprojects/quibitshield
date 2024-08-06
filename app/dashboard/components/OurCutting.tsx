@@ -76,7 +76,7 @@ export default function OurCutting() {
               further. Our patent-pending innovations enhance these foundational
               technologies, providing unique advantages:
             </p>
-            <b className="flex text-xl  items-center">
+            <b className="flex text-xl lg:text-nowrap  items-center">
               {" "}
               Utilizing Hidden Channels for Comprehensive Cryptographic
               Functionality
@@ -90,7 +90,7 @@ export default function OurCutting() {
               within Kyber, Saber, IBE, McEliece and more can:
             </p>
           </div>
-          <div className="lg:w-1/2 w-full overflow-hidden flex h-auto justify-center">
+          <div className="lg:w-1/2 w-full overflow-hidden flex h-auto justify-center lg:justify-end">
             <Image
               src="/4.jpg"
               width={500}
