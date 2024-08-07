@@ -48,7 +48,7 @@ export default function Attractive() {
 
       <p>
         This combination of technological innovation, market focus, and the
-        pressing need for post- quantum cryptographic solutions makes this an
+        pressing need for post-vquantum cryptographic solutions makes this an
         appealing investment opportunity.
       </p>
       <p>
