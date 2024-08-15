@@ -53,14 +53,10 @@ export default function Attractive() {
         appealing investment opportunity.
       </p>
       <p>
-        The company has filed its initial two patents and is now seeking our
-        first round of investment. We anticipate needing $12,500,000 over a
-        two-year period, with one-third of the investment required now,
-        one-third in twelve months, and the remaining one-third in twenty-four
-        months.” to “The company has filed its initial two patents and is now
-        seeking its first round of investment. We anticipate needing $8,000,000
-        over the next two years, with half of the investment required now and
-        the remaining half in twelve months.
+        The company has filed its initial two patents and is now seeking its
+        first round of investment. We anticipate needing $8,000,000 over the
+        next two years, with half of the investment required now and the
+        remaining half in twelve months.
       </p>
       <p>
         As quantum computing advances and Q-Day approaches, the market for
