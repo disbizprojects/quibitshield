@@ -153,7 +153,7 @@ export default function Page() {
       </div>
       <div className="w-full flex justify-center">
         <a
-          href="https://utfs.io/f/88661961-a3ef-45df-bb2e-fbfada64be57-ubdmr0.pdf"
+          href="https://utfs.io/f/51f700f7-cab7-4b5d-a766-c6cc46bebe81-b4prck.pdf"
           download
         >
           <Button className="rounded-full grad text-black mx-auto">

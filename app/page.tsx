@@ -27,8 +27,8 @@ export default function page() {
         </div>
         <div className="lg:w-[40%] flex flex-col gap-4">
           <h1 className="text-white lg:text-2xl text-xl text-wrap">
-            Enhancing IoT, smart cities,,Web3 and FinTech using advanced
-            post-quantum cryptography and AI,fostering innovation and ensuring
+            Enhancing IoT, smart cities, Web3 and FinTech using advanced
+            post-quantum cryptography and AI, fostering innovation and ensuring
             data sovereignty.
           </h1>
           <hr className="w-[50%] h-1  my-4 grad  border-0 rounded"></hr>

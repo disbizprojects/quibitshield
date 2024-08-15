@@ -22,11 +22,12 @@ export default function Attractive() {
           <hr className="w-[50%] h-2  my-4 grad  border-0 rounded"></hr>
           <div className="flex dashboard flex-col  justify-between items-center w-full  gap-8">
             <p className="  ">
-              With innovative patents pending, advancing several
-              near-standardized post-quantum cryptographic schemes, QubitShield
-              focuses on securing applications in IoT, smart cities, critical
-              infrastructure, payments, and Web3/FinTech. This represents an
-              attractive investment opportunity.
+              With innovative patents pending, we are advancing the FIPS 203
+              Module-Lattice-Based Key Encapsulation Mechanism Standard, as well
+              as several near-standardized post-quantum cryptographic schemes,
+              QubitShield focuses on securing applications in IoT, smart cities,
+              critical infrastructure, payments, and Web3/FinTech. This
+              represents an attractive investment opportunity.
             </p>
             <p>
               As governments and organizations worldwide recognize the urgency
@@ -48,7 +49,7 @@ export default function Attractive() {
 
       <p>
         This combination of technological innovation, market focus, and the
-        pressing need for post-vquantum cryptographic solutions makes this an
+        pressing need for post-quantum cryptographic solutions makes this an
         appealing investment opportunity.
       </p>
       <p>
@@ -56,7 +57,10 @@ export default function Attractive() {
         first round of investment. We anticipate needing $12,500,000 over a
         two-year period, with one-third of the investment required now,
         one-third in twelve months, and the remaining one-third in twenty-four
-        months.
+        months.” to “The company has filed its initial two patents and is now
+        seeking its first round of investment. We anticipate needing $8,000,000
+        over the next two years, with half of the investment required now and
+        the remaining half in twelve months.
       </p>
       <p>
         As quantum computing advances and Q-Day approaches, the market for
