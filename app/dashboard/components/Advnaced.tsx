@@ -6,14 +6,14 @@ import Bullet from "./Bullet";
 export default function Advnaced() {
   const data = [
     {
-      name: "Kyber and Saber",
+      name: "Module-Lattice-Based Key-Encapsulation Mechanism Standard FIPS 203 (formerly Kyber) and Saber",
       description:
-        "These key encapsulation mechanisms, built on the foundations of Learning With Errors (LWE) and Learning With Rounding (LWR), offer efficient and scalable encryption. As frontrunners in the NIST post-quantum cryptography standardization process, Kyber and Saber ensure our solutions meet the highest security benchmarks.",
+        "These key encapsulation mechanisms, built on the foundations of Learning With Errors (LWE) and Learning With Rounding (LWR), offer efficient and scalable encryption. As a NIST-approved standard, Module-Lattice-Based Key-Encapsulation Mechanism Standard FIPS 203 ensures our solutions meet the highest security benchmarks, while Saber, a near-term NIST PQC standard, is expected to play a crucial role in the future of post-quantum cryptography.",
     },
     {
-      name: "Crystals Dilithium",
+      name: "Module-Lattice-Based Digital Signature Standard FIPS 204 (formerly CRYSTALS-Dilithium)",
       description:
-        "Recognized as a leading lattice-based digital signature standard, this scheme provides robust authentication, ensuring the integrity and authenticity of communications.",
+        "As a premier lattice-based digital signature standard, this scheme delivers strong authentication, guaranteeing the integrity and authenticity of communications.",
     },
     {
       name: "McEliece Public-Key Cryptosystem",
