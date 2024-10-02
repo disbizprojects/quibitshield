@@ -17,8 +17,11 @@ export default function RootLayout({
           {children}
         </body>
         <Toaster />
-        <Script id="reb2b-script" strategy="afterInteractive">
-          {`
+        <Script
+          id="reb2b-script"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
             (function () {
               var reb2b = window.reb2b = window.reb2b || [];
               if (reb2b.invoked) return;
@@ -47,8 +50,9 @@ export default function RootLayout({
               reb2b.SNIPPET_VERSION = "1.0.1";
               reb2b.load("GOYPYHV1LKOX");
             })();
-          `}
-        </Script>
+          `,
+          }}
+        />
       </SessionProvider>
     </html>
   );
