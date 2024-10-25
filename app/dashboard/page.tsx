@@ -97,7 +97,7 @@ export default function Page() {
 
         <div className="flex lg:flex-row flex-col-reverse gap-2 items-center gap-x-8">
           <a
-            href="https://utfs.io/f/ac3df31e-257b-4e45-8cc8-de988fba0dee-ubdmr0.pdf"
+            href="https://utfs.io/f/tRkphlr7GUsSCZZsXur1OjXdmT9tauMYxDy74b58fHl0zNBS"
             download
           >
             <Button className="rounded-full grad text-black mx-auto">
@@ -153,7 +153,7 @@ export default function Page() {
       </div>
       <div className="w-full flex justify-center">
         <a
-          href="https://utfs.io/f/ac3df31e-257b-4e45-8cc8-de988fba0dee-ubdmr0.pdf"
+          href="https://utfs.io/f/tRkphlr7GUsSCZZsXur1OjXdmT9tauMYxDy74b58fHl0zNBS"
           download
         >
           <Button className="rounded-full grad text-black mx-auto">
