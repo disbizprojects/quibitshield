@@ -52,12 +52,12 @@ export default function Attractive() {
         pressing need for post-quantum cryptographic solutions makes this an
         appealing investment opportunity.
       </p>
-      <p>
+{/*       <p>
         The company has filed its initial two patents and is now seeking its
         first round of investment. We anticipate needing $8,000,000 over the
         next two years, with half of the investment required now and the
         remaining half in twelve months.
-      </p>
+      </p> */}
       <p>
         As quantum computing advances and Q-Day approaches, the market for
         post-quantum cryptographic solutions is set to explode. QubitShield is
