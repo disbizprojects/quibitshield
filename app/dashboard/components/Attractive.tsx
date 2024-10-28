@@ -31,7 +31,7 @@ export default function Attractive() {
             </p>
             <p>
               As governments and organizations worldwide recognize the urgency
-              of preparing for Q-Day,the point in time when quantum computers
+              of preparing for Q-Day, the point in time when quantum computers
               will be able to break current cryptographic systems—investment in
               post-quantum cryptographic solutions to protect these vital
               systems will become increasingly appealing.
