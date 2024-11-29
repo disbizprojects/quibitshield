@@ -1,5 +1,6 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
+import { FaBluesky } from "react-icons/fa6";
 import React from "react";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
@@ -24,7 +25,7 @@ export default function Footer() {
                 <a href="https://twitter.com/QubitShield">@QubitShield</a>
               </div>
               <div className="flex gap-2 items-center">
-                <FaXTwitter className="grad w-9 h-9 p-1 rounded-full text-black" />
+                <FaBluesky className="grad w-9 h-9 p-1 rounded-full text-black" />
                 <a href="https://bsky.app/profile/qubitshield.bsky.social">@QubitShield</a>
               </div>
             </div>
