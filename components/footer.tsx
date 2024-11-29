@@ -23,6 +23,10 @@ export default function Footer() {
                 <FaXTwitter className="grad w-9 h-9 p-1 rounded-full text-black" />
                 <a href="https://twitter.com/QubitShield">@QubitShield</a>
               </div>
+              <div className="flex gap-2 items-center">
+                <FaXTwitter className="grad w-9 h-9 p-1 rounded-full text-black" />
+                <a href="https://bsky.app/profile/qubitshield.bsky.social">@QubitShield</a>
+              </div>
             </div>
           </div>
         </div>
