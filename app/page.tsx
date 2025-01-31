@@ -5,6 +5,7 @@ import Script from "next/script";
 import Link from "next/link";
 
 export default function page() {
+// src="https://utfs.io/f/0c89a4fc-233e-4743-9a2f-a457b33f656b-x6zamt.mp4"
   return (
     <div className="bg-black  flex flex-col   lg:relative">
       <div className="flex w-full gap-4 justify-end relative">
@@ -18,7 +19,7 @@ export default function page() {
         <div className="2xl:w-[852px]   2xl:h-[700px] h-[500px] overflow-hidden flex items-center justify-center">
           <video
             className="w-full h-full"
-            src="https://utfs.io/f/0c89a4fc-233e-4743-9a2f-a457b33f656b-x6zamt.mp4"
+            src="https://it0zrde0xi.ufs.sh/f/maOWeryw6eaBkR4NR50MnhveOyIXDKw64YcgV0fUCF9qGQ5a"
             autoPlay
             muted
             loop
