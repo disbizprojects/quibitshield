@@ -171,7 +171,7 @@ export default function Page() {
             <FaXTwitter className="grad w-9 h-9 p-1 rounded-full text-black" />
             <a href="https://twitter.com/QubitShield">@QubitShield</a>
           </div>
-          <p className="text-sm">&copy; 2024 Qubit Shield Cryptology, Inc.</p>
+          <p className="text-sm">&copy; Qubit Shield Cryptology, Inc.</p>
         </div>
       </div>
     </div>
