@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex md:text-start text-center flex-col  lg:flex-row text-sm gap-2 lg:-mt-5">
-        <p className="text-sm">&copy; 2024 qubitshield.io</p>
+        <p className="text-sm">&copy; qubitshield.io</p>
         <Link href="/policy" className="hover:underline text-sm">
           <p className="text-sm">Privacy Policy</p>
         </Link>
